@@ -1,0 +1,143 @@
+@charset "utf-8";
+
+#container{}
+/*멘슬라이드*/
+.mainSlider{
+    background-color: #fff;
+    position: relative;
+    height: 1000px;
+    overflow: hidden;
+}
+.mainSlider p{
+    position: absolute;
+    left: 360px;
+    top:397px;
+    font-size: 70px;
+    font-weight: bold;
+    z-index: 1;
+    font-family: "NanumMyeongjo",serif;
+    letter-spacing: 3px;
+}
+
+.mainSlider span{
+    color: #fff;
+    background: url(../images/blackBox_03.png)no-repeat;
+}
+
+.onna{
+    position: absolute;
+    bottom: 0;
+    right: 400px;
+    
+}
+.onna img{}
+
+.marui1{
+    position: absolute;
+    right: -331px;
+    top:-100px;
+    
+}
+.marui2{
+    
+    position: absolute;
+    left: -331px;
+    bottom: -100px;
+}
+
+/*maincon01*/
+.mainCon01{
+    position: relative;
+    height: 1000px;
+}
+.mainCon01 img{
+    position: absolute;
+    left: 50px;
+    z-index: 1;
+}
+.mainCon01 p{
+    z-index: 1;
+    position:absolute;
+    left: 50px;
+    top:60px;
+    font-size: 79px;
+    width: 1448px;
+    font-family: "NotoSans-Regular","serif";
+    
+    
+}
+
+/*maincon02*/
+.mainCon02{
+    margin-top: 250px;
+    position: relative;
+    overflow: hidden;
+}
+.mainCon02 img{
+    width: 100%;
+}
+.mainCon02 p{
+    color: #fff;
+    font-size: 80px;
+    text-align: right;
+    position: absolute;
+    bottom: 276px;
+    right: 100px;
+    font-family: "NotoSans-Bold","serif";
+}
+@import "compass/css3";
+
+@import url(https://fonts.googleapis.com/css?family=Finger+Paint);
+
+.mainCon02 span {
+  display: inline-block;
+  text-shadow: 0 0 0 whitesmoke;
+  animation: smoky 6s 4s both;
+}
+
+.mainCon02 span:nth-child(even){
+  animation-name: smoky-mirror;
+}
+
+@keyframes smoky {
+  60% {
+    text-shadow: 0 0 40px whitesmoke;
+  }
+  to {
+    transform:
+      translate3d(15rem,-8rem,0)
+      rotate(-40deg)
+      skewX(70deg)
+      scale(1.5);
+    text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@keyframes smoky-mirror {
+  60% {
+    text-shadow: 0 0 40px whitesmoke; }
+  to {
+    transform:
+      translate3d(18rem,-8rem,0)
+      rotate(-40deg) 
+      skewX(-70deg)
+      scale(2);
+     text-shadow: 0 0 20px whitesmoke;
+    opacity: 0;
+  }
+}
+
+@for $item from 1 through 21 {
+  span:nth-of-type(#{$item}){ 
+    animation-delay: #{(3 + ($item/10))}s; 
+  }
+} 
+/*메인컨텐츠03*/
+.mainCon03{
+    background: url(../images/lastCont.png)no-repeat center center;
+    text-indent: -9999px;
+    background-size: cover;
+    height: 1369px;    
+}
+
